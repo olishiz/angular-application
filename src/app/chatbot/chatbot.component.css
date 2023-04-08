@@ -1,0 +1,37 @@
+/* chat.component.css */
+.chat-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.chat-messages {
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.chat-message {
+  margin-bottom: 8px;
+}
+
+.chat-message-body {
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 4px;
+}
+
+.chat-form {
+  display: flex;
+  margin-top: 16px;
+}
+
+.chat-input-container {
+  flex-grow: 1;
+  margin-right: 8px;
+}
+
+.chat-send-btn {
+  min-width: 80px;
+}

@@ -1,0 +1,21 @@
+<div class="d-flex align-items-center justify-content-center">
+  <!-- chat.component.html -->
+  <div class="chat-container">
+    <div class="chat-messages">
+      <div class="chat-message" *ngFor="let message of chatMessages">
+        <div class="chat-message-body">
+          {{ message.text }}
+        </div>
+      </div>
+    </div>
+    <form (ngSubmit)="sendMessage()" class="chat-form">
+      <mat-form-field appearance="fill" class="chat-input-container">
+        <mat-label>Type your message...</mat-label>
+        <input matInput [(ngModel)]="inputMessage" name="inputMessage" class="chat-input" />
+      </mat-form-field>
+      <button type="submit" mat-raised-button color="primary" class="chat-send-btn">Send</button>
+    </form>
+  </div>
+
+
+</div>

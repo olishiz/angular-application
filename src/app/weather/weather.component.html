@@ -1,0 +1,26 @@
+<div class="d-flex align-items-center justify-content-center">
+  <mat-card class="mx-3 bg-light text-dark" style="max-width: 400px;">
+    <mat-card-title class="text-center">Weather Information</mat-card-title>
+    <mat-card-content>
+      <p class="mb-1"><strong>City:</strong> {{ weatherData?.name }}</p>
+      <p class="mb-1"><strong>Temperature:</strong> {{ weatherData?.main?.temp }} &#8451;</p>
+      <p class="mb-0"><strong>Weather:</strong> {{ weatherData?.weather[0]?.description }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div class="d-flex align-items-center justify-content-center mt-5">
+  <form (ngSubmit)="submitForm()">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" [(ngModel)]="formData.name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="formData.password" name="password"
+             required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
