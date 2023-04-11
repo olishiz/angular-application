@@ -15,13 +15,19 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {ChatbotComponent} from './chatbot/chatbot.component';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
+import {FormDataComponent} from './form-data/form-data.component';
+import {TableUiComponent} from './table-ui/table-ui.component';
+import {MatTableModule} from "@angular/material/table";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherComponent,
     ButtonComponent,
-    ChatbotComponent
+    ChatbotComponent,
+    FormDataComponent,
+    TableUiComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +41,8 @@ import {MatInputModule} from "@angular/material/input";
     MatSnackBarModule,
     MatFormFieldModule,
     MatInputModule,
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

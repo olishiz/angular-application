@@ -23,27 +23,6 @@ export class WeatherComponent implements OnInit {
       });
   }
 
-  submitForm() {
-    // Perform POST request to 'submit-form' URL with form data
-    this.http.post('http://localhost:3000/submit-form', this.formData).subscribe(
-      (response) => {
-        // Handle success response
-        console.log('Form data submitted successfully:', response);
-        // Reset form data
-        this.formData = {name: '', password: ''};
 
-        this.snackBar.open('Form data submitted successfully', 'Close', {
-          duration: 3000,
-          horizontalPosition: 'center',
-          verticalPosition: 'top'
-        });
-
-      },
-      (error) => {
-        // Handle error response
-        console.error('Error submitting form data:', error);
-      }
-    );
-  }
 
 }
